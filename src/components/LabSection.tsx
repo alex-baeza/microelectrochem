@@ -30,6 +30,10 @@ const PARTICIPANTS = [
 ];
 
 export default function LabSection() {
+  const baseUrl = (import.meta as any).env?.BASE_URL || '/';
+  const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  const labOwlLogoUrl = `${cleanBase}images/lab_owl_logo.png`;
+
   return (
     <div className="space-y-10 max-w-4xl mx-auto">
       
@@ -44,9 +48,22 @@ export default function LabSection() {
           </span>
         </div>
 
-        <h3 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight leading-tight">
-          Laboratorios Anexos 3E y 3F de Química Micro-Electroanalítica
-        </h3>
+        <div className="flex items-start gap-4">
+          <div className="hidden sm:flex h-14 w-14 md:h-16 md:w-16 p-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xs shrink-0 items-center justify-center overflow-hidden">
+            <img 
+              src={labOwlLogoUrl} 
+              alt="Logo Búho Laboratorio" 
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-contain" 
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = './images/lab_owl_logo.png';
+              }}
+            />
+          </div>
+          <h3 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight leading-tight">
+            Laboratorios Anexos 3E y 3F de Química Micro-Electroanalítica
+          </h3>
+        </div>
 
         <div className="font-sans text-sm sm:text-base md:text-lg leading-relaxed text-slate-700 dark:text-slate-200">
           <p>

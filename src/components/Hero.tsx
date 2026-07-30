@@ -10,8 +10,11 @@ interface HeroProps {
 
 
 export default function Hero({ onLearnMore }: HeroProps) {
-  // Use dynamically resolved path for the professor's photograph
-  const profPhotoUrl = ((import.meta as any).env?.BASE_URL || '/') + 'images/prof_alejandro_baeza.jpg';
+  const baseUrl = (import.meta as any).env?.BASE_URL || '/';
+  const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  const unamLogoUrl = `${cleanBase}images/unam_logo.png`;
+  const labOwlLogoUrl = `${cleanBase}images/lab_owl_logo.png`;
+  const profPhotoUrl = `${cleanBase}images/prof_alejandro_baeza.jpg`;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -46,13 +49,29 @@ export default function Hero({ onLearnMore }: HeroProps) {
           <div className="lg:col-span-7 space-y-6 md:space-y-8 text-center lg:text-left">
             
             {/* Logos & Badges Row */}
-            <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start space-x-6">
-              <div className="w-14 h-14 md:w-16 md:h-16 p-2 bg-gradient-to-br from-amber-500/10 to-amber-600/5 dark:from-amber-500/20 dark:to-slate-900 rounded-2xl shadow-xs border border-amber-500/20 dark:border-amber-500/30 flex items-center justify-center shrink-0">
-                <Landmark className="w-7 h-7 md:w-8 md:h-8 text-amber-600 dark:text-amber-400" />
+            <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start space-x-4 sm:space-x-5">
+              <div className="w-14 h-14 md:w-16 md:h-16 p-2 bg-white dark:bg-slate-900/90 rounded-2xl shadow-xs border border-amber-500/20 dark:border-amber-500/30 flex items-center justify-center shrink-0 overflow-hidden">
+                <img 
+                  src={unamLogoUrl} 
+                  alt="Escudo UNAM" 
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-contain p-0.5" 
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = './images/unam_logo.png';
+                  }}
+                />
               </div>
               <div className="h-10 w-px bg-slate-200 dark:bg-slate-800" />
-              <div className="w-14 h-14 md:w-16 md:h-16 p-2 bg-gradient-to-br from-sky-500/10 to-sky-600/5 dark:from-sky-500/20 dark:to-slate-900 rounded-2xl shadow-xs border border-sky-500/20 dark:border-sky-500/30 flex items-center justify-center shrink-0">
-                <Atom className="w-7 h-7 md:w-8 md:h-8 text-sky-600 dark:text-sky-400" />
+              <div className="w-14 h-14 md:w-16 md:h-16 p-2 bg-white dark:bg-slate-900/90 rounded-2xl shadow-xs border border-sky-500/20 dark:border-sky-500/30 flex items-center justify-center shrink-0 overflow-hidden">
+                <img 
+                  src={labOwlLogoUrl} 
+                  alt="Logo Búho Micro-electroanalítica" 
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-contain p-0.5" 
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = './images/lab_owl_logo.png';
+                  }}
+                />
               </div>
               <div className="hidden sm:block">
                 <span className="block text-xs sm:text-sm font-mono font-extrabold text-amber-700 dark:text-amber-400 uppercase tracking-wider">

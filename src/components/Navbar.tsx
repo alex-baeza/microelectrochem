@@ -17,6 +17,10 @@ const NAV_ITEMS = [
 ];
 
 export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
+  const baseUrl = (import.meta as any).env?.BASE_URL || '/';
+  const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  const unamLogoUrl = `${cleanBase}images/unam_logo.png`;
+
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     const saved = localStorage.getItem('theme');
     return saved === 'dark' ? 'dark' : 'light';
@@ -61,8 +65,16 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
         <div className="flex items-center justify-between h-12">
           {/* Brand/Logo Section */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleItemClick('inicio')}>
-            <div className="p-2 bg-primary-light/10 dark:bg-primary-dark/20 text-primary-light dark:text-primary-dark rounded-lg">
-              <GraduationCap className="h-6 w-6 stroke-[1.8]" />
+            <div className="h-9 w-9 p-1 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-2xs shrink-0 overflow-hidden flex items-center justify-center">
+              <img 
+                src={unamLogoUrl} 
+                alt="Logo UNAM" 
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain" 
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = './images/unam_logo.png';
+                }}
+              />
             </div>
             <div>
               <span className="font-display font-bold tracking-tight text-lg text-slate-900 dark:text-slate-100 block">
