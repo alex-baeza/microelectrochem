@@ -50,7 +50,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
             
             {/* Logos & Badges Row */}
             <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start space-x-4 sm:space-x-5">
-              <div className="w-16 h-16 md:w-20 md:h-20 p-1 sm:p-1.5 bg-white dark:bg-slate-900/90 rounded-2xl shadow-xs border border-amber-500/20 dark:border-amber-500/30 flex items-center justify-center shrink-0 overflow-hidden">
+              <div className="w-20 h-20 md:w-24 md:h-24 p-1.5 sm:p-2 bg-white dark:bg-slate-900/90 rounded-2xl shadow-xs border border-amber-500/20 dark:border-amber-500/30 flex items-center justify-center shrink-0 overflow-hidden">
                 <img 
                   src={unamLogoUrl} 
                   alt="Escudo UNAM" 
@@ -61,8 +61,8 @@ export default function Hero({ onLearnMore }: HeroProps) {
                   }}
                 />
               </div>
-              <div className="h-12 w-px bg-slate-200 dark:bg-slate-800" />
-              <div className="w-16 h-16 md:w-20 md:h-20 p-1 sm:p-1.5 bg-white dark:bg-slate-900/90 rounded-2xl shadow-xs border border-sky-500/20 dark:border-sky-500/30 flex items-center justify-center shrink-0 overflow-hidden">
+              <div className="h-14 w-px bg-slate-200 dark:bg-slate-800" />
+              <div className="w-20 h-20 md:w-24 md:h-24 p-1.5 sm:p-2 bg-white dark:bg-slate-900/90 rounded-2xl shadow-xs border border-sky-500/20 dark:border-sky-500/30 flex items-center justify-center shrink-0 overflow-hidden">
                 <img 
                   src={labOwlLogoUrl} 
                   alt="Logo Búho Micro-electroanalítica" 
