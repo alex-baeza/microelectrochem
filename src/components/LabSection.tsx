@@ -49,7 +49,7 @@ export default function LabSection() {
         </div>
 
         <div className="flex items-start gap-4">
-          <div className="hidden sm:flex h-14 w-14 md:h-16 md:w-16 p-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xs shrink-0 items-center justify-center overflow-hidden">
+          <div className="hidden sm:flex h-16 w-16 md:h-20 md:w-20 p-1 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xs shrink-0 items-center justify-center overflow-hidden">
             <img 
               src={labOwlLogoUrl} 
               alt="Logo Búho Laboratorio" 

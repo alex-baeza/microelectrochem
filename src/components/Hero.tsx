@@ -50,24 +50,24 @@ export default function Hero({ onLearnMore }: HeroProps) {
             
             {/* Logos & Badges Row */}
             <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start space-x-4 sm:space-x-5">
-              <div className="w-14 h-14 md:w-16 md:h-16 p-2 bg-white dark:bg-slate-900/90 rounded-2xl shadow-xs border border-amber-500/20 dark:border-amber-500/30 flex items-center justify-center shrink-0 overflow-hidden">
+              <div className="w-16 h-16 md:w-20 md:h-20 p-1 sm:p-1.5 bg-white dark:bg-slate-900/90 rounded-2xl shadow-xs border border-amber-500/20 dark:border-amber-500/30 flex items-center justify-center shrink-0 overflow-hidden">
                 <img 
                   src={unamLogoUrl} 
                   alt="Escudo UNAM" 
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-contain p-0.5" 
+                  className="w-full h-full object-contain" 
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = './images/unam_logo.png';
                   }}
                 />
               </div>
-              <div className="h-10 w-px bg-slate-200 dark:bg-slate-800" />
-              <div className="w-14 h-14 md:w-16 md:h-16 p-2 bg-white dark:bg-slate-900/90 rounded-2xl shadow-xs border border-sky-500/20 dark:border-sky-500/30 flex items-center justify-center shrink-0 overflow-hidden">
+              <div className="h-12 w-px bg-slate-200 dark:bg-slate-800" />
+              <div className="w-16 h-16 md:w-20 md:h-20 p-1 sm:p-1.5 bg-white dark:bg-slate-900/90 rounded-2xl shadow-xs border border-sky-500/20 dark:border-sky-500/30 flex items-center justify-center shrink-0 overflow-hidden">
                 <img 
                   src={labOwlLogoUrl} 
                   alt="Logo Búho Micro-electroanalítica" 
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-contain p-0.5" 
+                  className="w-full h-full object-contain" 
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = './images/lab_owl_logo.png';
                   }}

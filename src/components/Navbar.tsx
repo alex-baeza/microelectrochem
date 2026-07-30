@@ -65,7 +65,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
         <div className="flex items-center justify-between h-12">
           {/* Brand/Logo Section */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleItemClick('inicio')}>
-            <div className="h-9 w-9 p-1 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-2xs shrink-0 overflow-hidden flex items-center justify-center">
+            <div className="h-10 w-10 p-0.5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-2xs shrink-0 overflow-hidden flex items-center justify-center">
               <img 
                 src={unamLogoUrl} 
                 alt="Logo UNAM" 
