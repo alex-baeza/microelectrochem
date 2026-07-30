@@ -1,0 +1,6 @@
+{
+  "name": "Dr. Alejandro Baeza Academic Portal",
+  "description": "Página académica oficial del Dr. Alejandro Baeza, Profesor Titular C de la UNAM en Química Analítica y Química Micro-Electroanalítica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

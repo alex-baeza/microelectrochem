@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Accent colors matching a high-end academic/scientific theme: navy/gold for Light, deep teal/cyan for Dark */
+  --color-primary-light: #0b2545;  /* UNAM Academic Blue */
+  --color-primary-dark: #38bdf8;   /* Sky Blue / Cyan accent */
+  --color-accent-light: #b392ac;   /* Muted gold/rose */
+  --color-accent-dark: #fbbf24;    /* Amber/Gold */
+}
+
+/* Custom scroll padding for navbar offset */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Custom styles for high-contrast scientific presentation in light and dark mode */
+.scientific-grid {
+  background-size: 32px 32px;
+  background-image: radial-gradient(circle, currentColor 1.2px, transparent 1.2px);
+}
+
+.scientific-grid-lines {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, currentColor 1px, transparent 1px),
+    linear-gradient(to bottom, currentColor 1px, transparent 1px);
+}
+
+/* Markdown styling if needed */
+.markdown-body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+

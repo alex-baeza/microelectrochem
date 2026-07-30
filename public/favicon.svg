@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- Background Container -->
+  <rect width="64" height="64" rx="16" fill="#0f172a"/>
+  <!-- Minimalist Geometric Owl Face -->
+  <!-- Outer Face Contour / Ear Tufts -->
+  <path d="M 14 16 Q 32 26 50 16 C 46 34 52 42 46 52 C 32 58 32 58 18 52 C 12 42 18 34 14 16 Z" fill="#1e293b" stroke="#f59e0b" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- Eyes - Outer Amber Ring -->
+  <circle cx="23" cy="33" r="8.5" fill="#0f172a" stroke="#f59e0b" stroke-width="2.5"/>
+  <circle cx="41" cy="33" r="8.5" fill="#0f172a" stroke="#f59e0b" stroke-width="2.5"/>
+  <!-- Pupils - Sky Blue Accent -->
+  <circle cx="23" cy="33" r="4" fill="#38bdf8"/>
+  <circle cx="41" cy="33" r="4" fill="#38bdf8"/>
+  <!-- Reflection Highlights -->
+  <circle cx="21.5" cy="31.5" r="1.5" fill="#ffffff"/>
+  <circle cx="39.5" cy="31.5" r="1.5" fill="#ffffff"/>
+  <!-- Beak -->
+  <path d="M 32 35 L 27 42 L 37 42 Z" fill="#f59e0b"/>
+  <!-- Eyebrow Feather Accents -->
+  <path d="M 17 22 Q 25 21 31 28" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 47 22 Q 39 21 33 28" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+</svg>
