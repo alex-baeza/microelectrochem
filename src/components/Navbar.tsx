@@ -30,10 +30,21 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
 
   useEffect(() => {
     const root = document.documentElement;
+    const body = document.body;
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
     if (theme === 'dark') {
       root.classList.add('dark');
+      body.classList.add('dark');
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', '#020617');
+      }
     } else {
       root.classList.remove('dark');
+      body.classList.remove('dark');
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', '#f8fafc');
+      }
     }
     localStorage.setItem('theme', theme);
   }, [theme]);

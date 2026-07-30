@@ -31,9 +31,6 @@ export default function Hero({ onLearnMore }: HeroProps) {
 
   return (
     <section className="relative overflow-hidden min-h-[90vh] flex items-center justify-center pt-24 pb-12 lg:py-28">
-      {/* Elegant Radial Dot grid background for high-tech scientific visual atmosphere */}
-      <div className="absolute inset-0 scientific-grid opacity-25 dark:opacity-[0.14] text-slate-850 dark:text-sky-500 pointer-events-none" />
-
       {/* Decorative gradient blur rings */}
       <div className="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-amber-500/10 dark:bg-amber-500/5 blur-3.5xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-10 w-96 h-96 rounded-full bg-sky-500/10 dark:bg-sky-500/5 blur-3.5xl pointer-events-none" />

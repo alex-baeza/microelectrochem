@@ -77,7 +77,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans selection:bg-amber-500/30 selection:text-slate-950 transition-colors duration-300 relative">
+    <div className="min-h-screen w-full overflow-x-hidden bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans selection:bg-amber-500/30 selection:text-slate-950 transition-colors duration-300 relative">
       
       {/* Global Scientific Dot Grid Background & Glow Circles (Light & Dark mode optimized) */}
       <div className="fixed inset-0 scientific-grid opacity-25 dark:opacity-20 text-slate-800 dark:text-sky-400 pointer-events-none z-0" />
