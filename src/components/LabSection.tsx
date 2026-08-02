@@ -1,5 +1,6 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Beaker, Users, MapPin, GraduationCap, BookOpen, Sparkles, Building2, Phone, Mail, Globe } from 'lucide-react';
+import { Beaker, Users, GraduationCap, BookOpen, Building2, Phone, Mail, Globe, MapPin, ExternalLink } from 'lucide-react';
 import { CONTACT_INFO } from '../data';
 
 const PARTICIPANTS = [
@@ -34,8 +35,31 @@ export default function LabSection() {
   const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
   const labOwlLogoUrl = `${cleanBase}images/lab_owl_logo.png`;
 
+  const [activeMapTab, setActiveMapTab] = useState<'mexico' | 'internacional'>('mexico');
+
+  // Listen to Datawrapper postMessage auto-height adjustments
+  useEffect(() => {
+    const handleMessage = (e: MessageEvent) => {
+      if (e.data && e.data['datawrapper-height'] !== undefined) {
+        const iframes = document.querySelectorAll('iframe');
+        for (const chartId in e.data['datawrapper-height']) {
+          for (let i = 0; i < iframes.length; i++) {
+            const iframe = iframes[i];
+            if (iframe.contentWindow === e.source) {
+              const newHeight = `${e.data['datawrapper-height'][chartId]}px`;
+              iframe.style.height = newHeight;
+            }
+          }
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
+
   return (
-    <div className="space-y-10 max-w-4xl mx-auto">
+    <div className="space-y-12 max-w-4xl mx-auto">
       
       {/* Intro presentation section without heavy card box */}
       <div className="space-y-6">
@@ -95,6 +119,116 @@ export default function LabSection() {
         </div>
       </div>
 
+      {/* Mapas de Presencia Nacional e Internacional en Cursos y Colaboraciones */}
+      <div className="space-y-6 pt-2">
+        <div className="border-b pb-3 border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h4 className="font-display font-black text-xl sm:text-2xl text-slate-950 dark:text-slate-50 flex items-center">
+              <MapPin className="h-6 w-6 mr-2 text-sky-500 shrink-0" />
+              Presencia e Impacto en Cursos y Colaboraciones
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-sans mt-1">
+              Alcance de los cursos, talleres e intercambios académicos impartidos a nivel nacional e internacional.
+            </p>
+          </div>
+
+          {/* Tab buttons */}
+          <div className="inline-flex p-1 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shrink-0 self-start sm:self-auto">
+            <button
+              onClick={() => setActiveMapTab('mexico')}
+              className={`px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg transition-all ${
+                activeMapTab === 'mexico'
+                  ? 'bg-white dark:bg-slate-800 text-amber-700 dark:text-amber-400 shadow-2xs border border-slate-200/80 dark:border-slate-700'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+              }`}
+            >
+              🇲🇽 México
+            </button>
+            <button
+              onClick={() => setActiveMapTab('internacional')}
+              className={`px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg transition-all ${
+                activeMapTab === 'internacional'
+                  ? 'bg-white dark:bg-slate-800 text-sky-700 dark:text-sky-400 shadow-2xs border border-slate-200/80 dark:border-slate-700'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+              }`}
+            >
+              🌎 Internacional
+            </button>
+          </div>
+        </div>
+
+        {/* Map containers */}
+        <div className="space-y-8">
+          {activeMapTab === 'mexico' && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="p-4 sm:p-6 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl shadow-2xs space-y-4"
+            >
+              <div className="flex items-center justify-between border-b pb-3 border-slate-100 dark:border-slate-800">
+                <div className="flex items-center space-x-2">
+                  <span className="p-1.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-lg">
+                    <MapPin className="h-4 w-4" />
+                  </span>
+                  <h5 className="font-display font-bold text-base text-slate-900 dark:text-slate-100">
+                    Presencia en la República Mexicana
+                  </h5>
+                </div>
+              </div>
+
+              <div className="w-full bg-slate-50 dark:bg-slate-950/60 rounded-xl overflow-hidden p-2 border border-slate-100 dark:border-slate-850">
+                <iframe
+                  title="Presencia en la República Mexicana:"
+                  aria-label="Symbol map"
+                  id="datawrapper-chart-lGI0N"
+                  src="https://datawrapper.dwcdn.net/lGI0N/2/"
+                  scrolling="no"
+                  frameBorder="0"
+                  style={{ width: '0', minWidth: '100%', border: 'none', minHeight: '520px' }}
+                  height="622"
+                  data-external="1"
+                />
+              </div>
+            </motion.div>
+          )}
+
+          {activeMapTab === 'internacional' && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="p-4 sm:p-6 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl shadow-2xs space-y-4"
+            >
+              <div className="flex items-center justify-between border-b pb-3 border-slate-100 dark:border-slate-800">
+                <div className="flex items-center space-x-2">
+                  <span className="p-1.5 bg-sky-500/10 text-sky-600 dark:text-sky-400 rounded-lg">
+                    <Globe className="h-4 w-4" />
+                  </span>
+                  <h5 className="font-display font-bold text-base text-slate-900 dark:text-slate-100">
+                    Presencia Internacional
+                  </h5>
+                </div>
+              </div>
+
+              <div className="w-full bg-slate-50 dark:bg-slate-950/60 rounded-xl overflow-hidden p-2 border border-slate-100 dark:border-slate-850">
+                <iframe
+                  title="Presencia Internacional:"
+                  aria-label="Choropleth map"
+                  id="datawrapper-chart-fY4XR"
+                  src="https://datawrapper.dwcdn.net/fY4XR/3/"
+                  scrolling="no"
+                  frameBorder="0"
+                  style={{ width: '0', minWidth: '100%', border: 'none', minHeight: '500px' }}
+                  height="517"
+                  data-external="1"
+                />
+              </div>
+            </motion.div>
+          )}
+        </div>
+      </div>
+
       {/* Participantes en Proyectos de Investigación y Docencia */}
       <div className="space-y-5">
         <div className="border-b pb-2 border-slate-200 dark:border-slate-800">
@@ -136,3 +270,4 @@ export default function LabSection() {
     </div>
   );
 }
+
