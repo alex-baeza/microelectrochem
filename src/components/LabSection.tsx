@@ -132,27 +132,29 @@ export default function LabSection() {
             </p>
           </div>
 
-          {/* Tab buttons */}
-          <div className="inline-flex p-1 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shrink-0 self-start sm:self-auto">
+          {/* Tab buttons with explicit background colors */}
+          <div className="inline-flex p-1.5 bg-slate-200/80 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-2xl gap-2 shrink-0 self-start sm:self-auto">
             <button
               onClick={() => setActiveMapTab('mexico')}
-              className={`px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg transition-all ${
+              className={`px-4 py-2 text-xs font-mono font-black rounded-xl transition-all cursor-pointer flex items-center space-x-1.5 ${
                 activeMapTab === 'mexico'
-                  ? 'bg-white dark:bg-slate-800 text-amber-700 dark:text-amber-400 shadow-2xs border border-slate-200/80 dark:border-slate-700'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+                  ? 'bg-amber-500 text-slate-950 shadow-md ring-2 ring-amber-500/40 scale-102'
+                  : 'bg-amber-100 dark:bg-amber-950/70 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-800 hover:bg-amber-200 dark:hover:bg-amber-900/80'
               }`}
             >
-              🇲🇽 México
+              <span>🇲🇽</span>
+              <span>Mapa México</span>
             </button>
             <button
               onClick={() => setActiveMapTab('internacional')}
-              className={`px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg transition-all ${
+              className={`px-4 py-2 text-xs font-mono font-black rounded-xl transition-all cursor-pointer flex items-center space-x-1.5 ${
                 activeMapTab === 'internacional'
-                  ? 'bg-white dark:bg-slate-800 text-sky-700 dark:text-sky-400 shadow-2xs border border-slate-200/80 dark:border-slate-700'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+                  ? 'bg-sky-500 text-slate-950 shadow-md ring-2 ring-sky-500/40 scale-102'
+                  : 'bg-sky-100 dark:bg-sky-950/70 text-sky-900 dark:text-sky-300 border border-sky-300 dark:border-sky-800 hover:bg-sky-200 dark:hover:bg-sky-900/80'
               }`}
             >
-              🌎 Internacional
+              <span>🌎</span>
+              <span>Mapa Internacional</span>
             </button>
           </div>
         </div>

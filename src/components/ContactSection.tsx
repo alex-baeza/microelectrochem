@@ -92,32 +92,27 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Direct Emails with Bot Obfuscation */}
+          {/* Direct Email with Bot Obfuscation */}
           <div className="flex items-start space-x-3.5">
             <div className="h-10 w-10 bg-slate-50 dark:bg-slate-950 p-2 text-indigo-500 rounded-xl shrink-0 flex items-center justify-center border border-slate-100 dark:border-slate-800">
               <Mail className="h-5.5 w-5.5" />
             </div>
             <div className="space-y-1">
-              <span className="text-[10px] font-mono uppercase font-bold text-slate-400 dark:text-slate-500 block">Correos Institucionales</span>
+              <span className="text-[10px] font-mono uppercase font-bold text-slate-400 dark:text-slate-500 block">Correo Institucional</span>
               
               {showEmails ? (
-                <div className="space-y-1">
-                  <div className="flex items-center space-x-2">
-                    <a href={`mailto:${CONTACT_INFO.email}`} className="font-mono text-xs text-sky-600 dark:text-sky-400 hover:underline">
-                      {CONTACT_INFO.email}
-                    </a>
-                    <button
-                      type="button"
-                      onClick={() => handleCopyEmail(CONTACT_INFO.email)}
-                      className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded cursor-pointer"
-                      title="Copiar correo"
-                    >
-                      {copiedEmail ? <Check className="h-3 w-3 text-emerald-500" /> : <Copy className="h-3 w-3" />}
-                    </button>
-                  </div>
-                  <a href={`mailto:${CONTACT_INFO.alternativeEmail}`} className="block font-mono text-xs text-slate-500 hover:underline">
-                    {CONTACT_INFO.alternativeEmail}
+                <div className="flex items-center space-x-2">
+                  <a href={`mailto:${CONTACT_INFO.email}`} className="font-mono text-sm font-semibold text-sky-600 dark:text-sky-400 hover:underline">
+                    {CONTACT_INFO.email}
                   </a>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyEmail(CONTACT_INFO.email)}
+                    className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded cursor-pointer"
+                    title="Copiar correo"
+                  >
+                    {copiedEmail ? <Check className="h-3.5 w-3.5 text-emerald-500" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
                 </div>
               ) : (
                 <button
@@ -126,7 +121,7 @@ export default function ContactSection() {
                   className="inline-flex items-center space-x-1.5 px-2.5 py-1 text-xs font-mono font-medium text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-750 rounded-lg transition-colors cursor-pointer"
                 >
                   <Eye className="h-3.5 w-3.5 text-amber-500" />
-                  <span>Ver correos protegidos</span>
+                  <span>Ver correo protegido</span>
                 </button>
               )}
             </div>

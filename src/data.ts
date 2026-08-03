@@ -18,87 +18,47 @@ export const RESEARCH_LINES: ResearchLine[] = [
   {
     id: 'materiales-biomateriales',
     title: '1. Caracterización y Control Analítico de Materiales, Biomateriales y Sistemas Electroactivos',
-    description: 'Perteneciente al rubro de Iniciación Temprana a la Investigación. Estudio fisicoquímico y electroanalítico de materiales avanzados, matrices biológicas e interfaces electroactivas.',
-    objectives: [
-      'Determinar las propiedades de transferencia electrónica en nuevos materiales y biomateriales.',
-      'Desarrollar protocolos de control analítico cuantitativo en sistemas electroactivos complejos.',
-      'Evaluar la estabilidad fisicoquímica e interfacial para aplicaciones analíticas e industriales.'
-    ],
-    techniques: [
-      'Voltamperometría Cíclica y de Onda Cuadrada',
-      'Cronoamperometría e Impedancia Electroquímica',
-      'Espectroelectroquímica y Microelectrodos'
-    ],
-    keywords: ['Biomateriales', 'Sistemas Electroactivos', 'Control Analítico', 'Materiales Avanzados'],
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600'
+    description: '',
+    objectives: [],
+    techniques: [],
+    keywords: [],
+    imageUrl: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'sensores-biosensores',
     title: '2. Sensores y Biosensores',
-    description: 'Perteneciente al rubro de Iniciación Temprana a la Investigación. Diseño, construcción y calibración de transductores electroquímicos y dispositivos biológicos de detección.',
-    objectives: [
-      'Desarrollar sensores y biosensores selectivos para la cuantificación de analitos de interés clínico y ambiental.',
-      'Optimizar la inmovilización de enzimas y receptores sobre superficies electródicas.',
-      'Evaluar parámetros de calidad analítica (sensibilidad, límite de detección, reproducibilidad) en muestras reales.'
-    ],
-    techniques: [
-      'Electrodos Modificados y Serigrafiados (SPEs)',
-      'Bioelectroquímica y Transducción Enzimática',
-      'Análisis por Inyección en Flujo (FIA)'
-    ],
-    keywords: ['Sensores', 'Biosensores', 'Electrodos Modificados', 'Detección Enzimática'],
-    imageUrl: 'https://images.unsplash.com/photo-1517860413143-ef8da5f4a1c2?auto=format&fit=crop&q=80&w=600'
+    description: '',
+    objectives: [],
+    techniques: [],
+    keywords: [],
+    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3250a8b0?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'especiacion-metales',
     title: '3. Especiación de Metales en Medios Naturales y Ambientales',
-    description: 'Perteneciente al rubro de Iniciación Temprana a la Investigación. Cuantificación y diferenciación de formas químicas, estados de oxidación y complejos metálicos en matrices acuosas y ambientales.',
-    objectives: [
-      'Identificar y discriminar especies químicas metálicas tóxicas o esenciales en cuerpos de agua y suelos.',
-      'Modelar el comportamiento termodinámico mediante diagramas de zonas de predominio (DZP).',
-      'Aplicar técnicas voltamperométricas de ultra-trazas para muestras ambientales in-situ.'
-    ],
-    techniques: [
-      'Voltamperometría de Redisolución Anódica y Catódica (ASV/CSV)',
-      'Voltamperometría de Pulso Diferencial (DPV)',
-      'Diagramas de Zonas de Predominio en Medios Complejos'
-    ],
-    keywords: ['Especiación de Metales', 'Medios Naturales', 'Ambiental', 'Análisis de Trazas'],
+    description: '',
+    objectives: [],
+    techniques: [],
+    keywords: [],
     imageUrl: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'microescala-total',
     title: '4. Desarrollo de Metodología Analítica en Química Analítica a Microescala Total',
-    description: 'Perteneciente al rubro de Innovación Docente. Innovación metodológica orientada a miniaturizar procesos analíticos, reduciendo drásticamente reactivos y residuos sin perder precisión.',
-    objectives: [
-      'Diseñar e implementar metodologías analíticas sustentables a microescala total.',
-      'Fabricar ultramicroelectrodos (UMEs) y celdas microvolumétricas para docencia e investigación.',
-      'Disminuir el impacto ambiental y costo en los laboratorios universitarios e industriales.'
-    ],
-    techniques: [
-      'Química Analítica a Microescala Total (AMYD)',
-      'Ultramicroelectrodos (UMEs)',
-      'Celdas Microvolumétricas y Capilares de Precisión'
-    ],
-    keywords: ['Microescala Total', 'Innovación Docente', 'Sustentabilidad', 'UMEs'],
+    description: '',
+    objectives: [],
+    techniques: [],
+    keywords: [],
     imageUrl: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'material-apoyo-docente',
     title: '5. Elaboración de Material de Apoyo Docente: Artículos, Manuales, Libros, Videos, etc.',
-    description: 'Perteneciente al rubro de Innovación Docente. Creación y difusión de recursos educativos abiertos, artículos didácticos, guías de laboratorio y contenido audiovisual interactivo.',
-    objectives: [
-      'Generar manuales de laboratorio y guías teórico-prácticas para la enseñanza de la Química Analítica.',
-      'Publicar artículos didácticos en revistas nacionales e internacionales de educación científica.',
-      'Producir videos interactivos y mantener repositorios virtuales de acceso libre (AMYD FQ UNAM).'
-    ],
-    techniques: [
-      'Redacción y Producción de Manuales de Laboratorio',
-      'Producción de Material Audiovisual Científico',
-      'Plataforma Virtual Abierta (AMYD FQ UNAM)'
-    ],
-    keywords: ['Apoyo Docente', 'Manuales y Libros', 'Videos Didácticos', 'Difusión Científica'],
-    imageUrl: 'https://images.unsplash.com/photo-1532187863486-abf9d39d66e8?auto=format&fit=crop&q=80&w=600'
+    description: '',
+    objectives: [],
+    techniques: [],
+    keywords: [],
+    imageUrl: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=600'
   }
 ];
 
@@ -280,7 +240,6 @@ export const CONTACT_INFO = {
   office: 'Edificio "A" 3er piso, Laboratorios anexos 3E y 3F, Facultad de Química UNAM',
   phone: '56-22-37-50',
   email: 'baeza@unam.mx',
-  alternativeEmail: 'alejandro.baeza@quimica.unam.mx',
   website: 'https://amyd.quimica.unam.mx',
   orcid: '0000-0002-3942-9983',
   googleScholarId: 'zR7T8sAAAAAJ',
