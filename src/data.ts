@@ -31,7 +31,7 @@ export const RESEARCH_LINES: ResearchLine[] = [
     objectives: [],
     techniques: [],
     keywords: [],
-    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3250a8b0?auto=format&fit=crop&q=80&w=600'
+    imageUrl: 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'especiacion-metales',
