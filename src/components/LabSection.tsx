@@ -182,11 +182,11 @@ export default function LabSection() {
                   title="Presencia en la República Mexicana:"
                   aria-label="Symbol map"
                   id="datawrapper-chart-lGI0N"
-                  src="https://datawrapper.dwcdn.net/lGI0N/2/"
+                  src="https://datawrapper.dwcdn.net/lGI0N/3/"
                   scrolling="no"
                   frameBorder="0"
                   style={{ width: '0', minWidth: '100%', border: 'none', minHeight: '520px' }}
-                  height="622"
+                  height="613"
                   data-external="1"
                 />
               </div>
@@ -214,13 +214,13 @@ export default function LabSection() {
               <div className="w-full bg-slate-50 dark:bg-slate-950/60 rounded-xl overflow-hidden p-2 border border-slate-100 dark:border-slate-850">
                 <iframe
                   title="Presencia Internacional:"
-                  aria-label="Choropleth map"
-                  id="datawrapper-chart-fY4XR"
-                  src="https://datawrapper.dwcdn.net/fY4XR/3/"
+                  aria-label="Mapa del símbolo"
+                  id="datawrapper-chart-EYrtu"
+                  src="https://datawrapper.dwcdn.net/EYrtu/3/"
                   scrolling="no"
                   frameBorder="0"
                   style={{ width: '0', minWidth: '100%', border: 'none', minHeight: '500px' }}
-                  height="517"
+                  height="614"
                   data-external="1"
                 />
               </div>
