@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://victorgomezg.github.io/microelectrochem/sitemap.xml
+Sitemap: https://alex-baeza.github.io/microelectrochem/sitemap.xml
