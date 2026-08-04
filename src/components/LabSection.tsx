@@ -184,7 +184,7 @@ export default function LabSection() {
                   title="Presencia en la República Mexicana:"
                   aria-label="Symbol map"
                   id="datawrapper-chart-lGI0N"
-                  src="https://datawrapper.dwcdn.net/lGI0N/3/"
+                  src="https://datawrapper.dwcdn.net/lGI0N/4/"
                   scrolling="no"
                   frameBorder="0"
                   style={{ width: '0', minWidth: '100%', border: 'none', minHeight: '520px' }}
