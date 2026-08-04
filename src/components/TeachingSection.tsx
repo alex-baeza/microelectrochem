@@ -141,33 +141,6 @@ export default function TeachingSection() {
           Acceda a recursos experimentales registrados en video, donde se documenta de forma visual la química analítica y electroquímica a microescala total en el laboratorio del Dr. Baeza.
         </p>
 
-        {/* Canal de YouTube Oficial Callout Banner */}
-        <div className="p-5 sm:p-6 bg-gradient-to-r from-red-500/10 via-slate-900/5 to-amber-500/10 dark:from-red-950/40 dark:via-slate-900 dark:to-slate-950 border border-red-500/20 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-2xs">
-          <div className="flex items-start space-x-3.5">
-            <div className="p-3 bg-red-600 text-white rounded-2xl shrink-0 shadow-md">
-              <Youtube className="h-6 w-6" />
-            </div>
-            <div className="space-y-1">
-              <h5 className="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-slate-100">
-                Canal Oficial de YouTube: <span className="text-red-600 dark:text-red-400 font-extrabold">El Microlaboratorio</span>
-              </h5>
-              <p className="text-xs text-slate-600 dark:text-slate-300 font-sans leading-relaxed">
-                Para ver más videos demostrativos, clases de laboratorio y experimentos de Química Analítica a Microescala Total, visite el canal oficial.
-              </p>
-            </div>
-          </div>
-          <a
-            href="https://www.youtube.com/@elmicrolaboratorio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-sans text-xs font-bold rounded-xl shadow-xs transition-all shrink-0 cursor-pointer active:scale-98"
-          >
-            <Youtube className="h-4 w-4 mr-1.5 fill-current" />
-            Visitar @elmicrolaboratorio
-            <ExternalLink className="h-3.5 w-3.5 ml-1.5 opacity-80" />
-          </a>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {YOUTUBE_VIDEOS.map((video, index) => (
             <motion.div
@@ -234,6 +207,33 @@ export default function TeachingSection() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Canal de YouTube Oficial Callout Banner */}
+        <div className="p-5 sm:p-6 bg-gradient-to-r from-red-500/10 via-slate-900/5 to-amber-500/10 dark:from-red-950/40 dark:via-slate-900 dark:to-slate-950 border border-red-500/20 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-2xs">
+          <div className="flex items-start space-x-3.5">
+            <div className="p-3 bg-red-600 text-white rounded-2xl shrink-0 shadow-md">
+              <Youtube className="h-6 w-6" />
+            </div>
+            <div className="space-y-1">
+              <h5 className="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-slate-100">
+                Canal Oficial de YouTube: <span className="text-red-600 dark:text-red-400 font-extrabold">El Microlaboratorio</span>
+              </h5>
+              <p className="text-xs text-slate-600 dark:text-slate-300 font-sans leading-relaxed">
+                Para ver más videos demostrativos, clases de laboratorio y experimentos de Química Analítica a Microescala Total, visite el canal oficial.
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://www.youtube.com/@elmicrolaboratorio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-sans text-xs font-bold rounded-xl shadow-xs transition-all shrink-0 cursor-pointer active:scale-98"
+          >
+            <Youtube className="h-4 w-4 mr-1.5 fill-current" />
+            Visitar @elmicrolaboratorio
+            <ExternalLink className="h-3.5 w-3.5 ml-1.5 opacity-80" />
+          </a>
         </div>
       </div>
 
