@@ -4,10 +4,10 @@ export interface Publication {
   authors: string;
   journal: string;
   year: number;
+  url?: string;
   doi?: string;
-  pdfUrl?: string;
-  topic: string; // 'Electroquímica', 'Micro-analítica', 'Biosensores', 'Métodos Analíticos'
-  type: 'Artículo de Revista' | 'Capítulo de Libro' | 'Conferencia' | 'Divulgación';
+  topic?: string;
+  type?: string;
   abstract?: string;
 }
 
