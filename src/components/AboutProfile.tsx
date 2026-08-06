@@ -16,7 +16,6 @@ const SEMBLANZA_PERIODS = [
     badge: 'Grados UNAM',
     title: 'Licenciatura, Maestría y Primer Doctorado en Química Analítica de la UNAM',
     icon: <GraduationCap className="h-5 w-5 text-amber-500" />,
-    summary: 'Licenciatura en Bioquímica (QFB) con mención honorífica. Maestría y Doctorado en Química Analítica por la Facultad de Química UNAM, siendo el 1.er graduado del programa de doctorado en 1997.',
     details: [
       'Obtiene el título profesional de Licenciatura en Bioquímica (QFB) por la Facultad de Química de la UNAM con Mención Honorífica.',
       'Cursa la Maestría en Ciencias Químicas (Química Analítica) en la Facultad de Química UNAM, siendo acreedor a la Medalla "Gabino Barreda".',
@@ -29,7 +28,6 @@ const SEMBLANZA_PERIODS = [
     badge: '12 Países (América y Europa)',
     title: 'Profesor e Instructor Internacional en 18 Universidades e Instituciones',
     icon: <Globe className="h-5 w-5 text-indigo-500" />,
-    summary: 'Profesor e instructor invitado y asesor en 18 universidades e instituciones científicas de 12 países en América y Europa.',
     details: [
       'Profesor e instructor reconocido de Química Analítica a Microescala Total y Electroquímica en 18 instituciones académicas internacionales:',
       '• Cuba: Universidad de La Habana, Universidad Central de Las Villas y Universidad de Oriente (Santiago de Cuba)',
@@ -53,7 +51,6 @@ const SEMBLANZA_PERIODS = [
     badge: 'Premio Nacional y Galardón ISE',
     title: 'Premio Nacional de Química "Andrés Manuel del Río" y Best Poster Award ISE',
     icon: <Star className="h-5 w-5 text-emerald-500" />,
-    summary: 'Máximo galardón de la Sociedad Química de México en Docencia y reconocimiento de la International Society of Electrochemistry en Taiwán.',
     details: [
       'En 2015 es galardonado con el Premio Nacional de Química "Andrés Manuel del Río" en el Área de Docencia, otorgado por la Sociedad Química de México.',
       'En 2015 recibe el Best Poster Award otorgado por la International Society of Electrochemistry en Taiwán.'
@@ -188,9 +185,9 @@ export default function AboutProfile() {
                       <h5 className="font-display font-bold text-base text-slate-900 dark:text-slate-100">
                         {period.title}
                       </h5>
-                      <p className="text-xs text-slate-600 dark:text-slate-400 font-sans leading-relaxed line-clamp-2">
-                        {period.summary}
-                      </p>
+                      <div className="flex items-center space-x-1.5 pt-1 text-xs font-semibold text-amber-600 dark:text-amber-400">
+                        <span>{isExpanded ? 'Ocultar información' : 'Haz clic para más información'}</span>
+                      </div>
                     </div>
                   </div>
 
@@ -263,22 +260,12 @@ export default function AboutProfile() {
                 <Award className="h-6 w-6" />
               </div>
               <div>
-                <span className="px-2.5 py-0.5 bg-amber-500/10 text-amber-700 dark:text-amber-400 font-mono text-[10px] font-extrabold uppercase rounded border border-amber-500/20">
-                  Distinciones Institucionales UNAM
-                </span>
-                <h4 className="font-display font-black text-lg sm:text-xl text-slate-900 dark:text-slate-50 mt-1">
+                <h4 className="font-display font-black text-lg sm:text-xl text-slate-900 dark:text-slate-50">
                   Reconocimientos y Cátedra "Juan Salvador Agraz"
                 </h4>
               </div>
             </div>
-            <span className="px-3 py-1 bg-sky-500/10 text-sky-700 dark:text-sky-400 font-mono text-xs font-bold rounded-lg border border-sky-500/20">
-              PRIDE Nivel D & RDUNJA
-            </span>
           </div>
-
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-sans leading-relaxed">
-            Titular de la Cátedra Especial "Juan Salvador Agraz" (1994 y 1995), Premio RDUNJA (Reconocimiento Distinción Universidad Nacional para Jóvenes Académicos, 1997) y PRIDE Nivel D ininterrumpido de 1996 a 2015.
-          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
             <div className="p-3.5 bg-white/80 dark:bg-slate-950/60 rounded-xl border border-slate-200/60 dark:border-slate-800 space-y-1">
@@ -297,7 +284,7 @@ export default function AboutProfile() {
                 Premio RDUNJA (1997)
               </h5>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pl-6">
-                Reconocimiento Distinción Universidad Nacional para Jóvenes Académicos en el área de Docencia en Ciencias Naturales.
+                Premio RDUNJA (Reconocimiento Distinción Universidad Nacional para Jóvenes Académicos) en el área de Docencia en Ciencias Naturales.
               </p>
             </div>
 

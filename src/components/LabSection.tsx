@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Beaker, Users, GraduationCap, BookOpen, Building2, Phone, Mail, Globe, MapPin, ExternalLink } from 'lucide-react';
+import { Beaker, Users, GraduationCap, BookOpen, Building2, Phone, Mail, Globe, MapPin, ExternalLink, Microscope } from 'lucide-react';
 import { CONTACT_INFO } from '../data';
 
 const PARTICIPANTS = [
@@ -46,8 +46,8 @@ export default function LabSection() {
           for (let i = 0; i < iframes.length; i++) {
             const iframe = iframes[i];
             if (iframe.contentWindow === e.source) {
-              const newHeight = `${e.data['datawrapper-height'][chartId]}px`;
-              iframe.style.height = newHeight;
+              const rawHeight = e.data['datawrapper-height'][chartId];
+              iframe.style.height = `${rawHeight}px`;
             }
           }
         }
@@ -63,13 +63,28 @@ export default function LabSection() {
       
       {/* Intro presentation section without heavy card box */}
       <div className="space-y-6">
+        {/* Quick section navigation buttons */}
         <div className="flex flex-wrap items-center gap-2">
-          <span className="inline-flex items-center px-3 py-1 bg-amber-500/10 text-amber-800 dark:text-amber-400 text-xs font-mono font-bold uppercase tracking-wider rounded-full border border-amber-500/20">
-            {CONTACT_INFO.institution}
-          </span>
-          <span className="inline-flex items-center px-3 py-1 bg-sky-500/10 text-sky-800 dark:text-sky-400 text-xs font-mono font-bold uppercase tracking-wider rounded-full border border-sky-500/20">
-            {CONTACT_INFO.faculty}
-          </span>
+          <button
+            onClick={() => {
+              const el = document.getElementById('laboratorio');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-400 font-sans text-xs font-bold rounded-xl border border-amber-500/20 transition-all flex items-center cursor-pointer active:scale-95"
+          >
+            <Beaker className="h-4 w-4 mr-1.5 text-amber-500" />
+            Laboratorios 3E y 3F
+          </button>
+          <button
+            onClick={() => {
+              const el = document.getElementById('investigacion');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="px-4 py-2 bg-sky-500/10 hover:bg-sky-500/20 text-sky-800 dark:text-sky-400 font-sans text-xs font-bold rounded-xl border border-sky-500/20 transition-all flex items-center cursor-pointer active:scale-95"
+          >
+            <Microscope className="h-4 w-4 mr-1.5 text-sky-500" />
+            Líneas de Investigación
+          </button>
         </div>
 
         <div className="flex items-start gap-4">
@@ -184,11 +199,11 @@ export default function LabSection() {
                   title="Presencia en la República Mexicana:"
                   aria-label="Symbol map"
                   id="datawrapper-chart-lGI0N"
-                  src="https://datawrapper.dwcdn.net/lGI0N/4/"
+                  src="https://datawrapper.dwcdn.net/lGI0N/3/"
                   scrolling="no"
                   frameBorder="0"
                   style={{ width: '0', minWidth: '100%', border: 'none', minHeight: '520px' }}
-                  height="613"
+                  height="520"
                   data-external="1"
                 />
               </div>
@@ -222,7 +237,7 @@ export default function LabSection() {
                   scrolling="no"
                   frameBorder="0"
                   style={{ width: '0', minWidth: '100%', border: 'none', minHeight: '500px' }}
-                  height="614"
+                  height="500"
                   data-external="1"
                 />
               </div>

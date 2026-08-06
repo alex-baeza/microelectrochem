@@ -92,7 +92,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                 Dr. Alejandro Baeza
               </span>
               <span className="text-[10px] font-mono tracking-wider font-semibold text-slate-500 dark:text-sky-400 block uppercase">
-                UNAM • Química Analítica
+                UNAM • Facultad de Química
               </span>
             </div>
           </div>

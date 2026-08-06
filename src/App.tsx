@@ -121,29 +121,6 @@ export default function App() {
             {/* TAB 2: Laboratorio (Laboratorio FIRST, Investigación SECOND) */}
             {activeTab === 'laboratorio' && (
               <div className="space-y-16 pt-6">
-                {/* Tab Sub-navigation Bar */}
-                <div className="flex flex-wrap items-center justify-between gap-4 p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-2xs">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <button
-                      onClick={() => navigateToSection('laboratorio')}
-                      className="px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-400 font-sans text-xs font-bold rounded-xl border border-amber-500/20 transition-all flex items-center cursor-pointer"
-                    >
-                      <Beaker className="h-4 w-4 mr-1.5" />
-                      Laboratorios 3E y 3F
-                    </button>
-                    <button
-                      onClick={() => navigateToSection('investigacion')}
-                      className="px-4 py-2 bg-sky-500/10 hover:bg-sky-500/20 text-sky-800 dark:text-sky-400 font-sans text-xs font-bold rounded-xl border border-sky-500/20 transition-all flex items-center cursor-pointer"
-                    >
-                      <Microscope className="h-4 w-4 mr-1.5" />
-                      Líneas de Investigación
-                    </button>
-                  </div>
-                  <span className="text-[11px] font-mono text-slate-400 dark:text-slate-500 hidden sm:block">
-                    Laboratorio e Investigación
-                  </span>
-                </div>
-
                 {/* Section 1: Laboratorio FIRST */}
                 <div id="laboratorio" className="scroll-mt-28 space-y-6">
                   <LabSection />
@@ -162,32 +139,9 @@ export default function App() {
               </div>
             )}
 
-            {/* TAB 3: Publicaciones (Publicaciones + Proyectos) */}
+            {/* TAB 3: Publicaciones */}
             {activeTab === 'publicaciones' && (
-              <div className="space-y-16 pt-6">
-                {/* Tab Sub-navigation Bar */}
-                <div className="flex flex-wrap items-center justify-between gap-4 p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-2xs">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <button
-                      onClick={() => navigateToSection('publicaciones')}
-                      className="px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-400 font-sans text-xs font-bold rounded-xl border border-amber-500/20 transition-all flex items-center cursor-pointer"
-                    >
-                      <Library className="h-4 w-4 mr-1.5" />
-                      Publicaciones Científicas
-                    </button>
-                    <button
-                      onClick={() => navigateToSection('proyectos')}
-                      className="px-4 py-2 bg-sky-500/10 hover:bg-sky-500/20 text-sky-800 dark:text-sky-400 font-sans text-xs font-bold rounded-xl border border-sky-500/20 transition-all flex items-center cursor-pointer"
-                    >
-                      <Bookmark className="h-4 w-4 mr-1.5" />
-                      Proyectos de Investigación
-                    </button>
-                  </div>
-                  <span className="text-[11px] font-mono text-slate-400 dark:text-slate-500 hidden sm:block">
-                    Publicaciones y Proyectos
-                  </span>
-                </div>
-
+              <div className="space-y-12 pt-6">
                 {/* Section 1: Publicaciones */}
                 <div id="publicaciones" className="scroll-mt-28 space-y-6">
                   <div className="space-y-2 border-b pb-4 dark:border-slate-800">
@@ -199,7 +153,8 @@ export default function App() {
                   <Publications />
                 </div>
 
-                {/* Section 2: Proyectos */}
+                {/* Section 2: Proyectos de Investigación (Reservado para rellenar en el futuro) */}
+                {/* 
                 <div id="proyectos" className="scroll-mt-28 space-y-6 border-t pt-12 border-slate-200/80 dark:border-slate-800">
                   <div className="space-y-2 border-b pb-4 dark:border-slate-800">
                     <span className="text-xs font-mono font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest block">
@@ -212,6 +167,7 @@ export default function App() {
                   </div>
                   <ProjectsSection />
                 </div>
+                */}
               </div>
             )}
 

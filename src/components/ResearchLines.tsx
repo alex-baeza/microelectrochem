@@ -7,14 +7,6 @@ export default function ResearchLines() {
   return (
     <div className="space-y-6 max-w-7xl mx-auto">
       
-      {/* Section Header */}
-      <div className="p-4 sm:p-5 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl shadow-2xs">
-        <h3 className="font-display font-black text-lg sm:text-xl text-slate-900 dark:text-slate-50 flex items-center">
-          <Beaker className="h-5 w-5 mr-2 text-amber-500 shrink-0" />
-          Líneas de Investigación
-        </h3>
-      </div>
-
       {/* Grid of Clean Research Line Cards - Image + Line Name ONLY */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {RESEARCH_LINES.map((line: ResearchLine, index) => {

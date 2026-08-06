@@ -162,7 +162,6 @@ export default function Hero({ onLearnMore }: HeroProps) {
                     <span className="block text-[9px] font-mono text-amber-400 font-bold uppercase tracking-wider">PROFESOR - INVESTIGADOR</span>
                     <span className="block text-xs font-display font-semibold text-white">Dr. Alejandro Baeza</span>
                   </div>
-                  <div className="h-2 w-2 rounded-full bg-emerald-500" />
                 </div>
               </div>
 
