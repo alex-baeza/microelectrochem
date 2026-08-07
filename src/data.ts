@@ -520,23 +520,51 @@ export const PROJECTS: Project[] = [
 ];
 
 /* ----------------------------------------------------------------------------
- * 4. CURSOS Y ASIGNATURAS DOCENTES (Plantilla editable para datos reales)
+ * 4. CURSOS Y ASIGNATURAS DOCENTES
  * ----------------------------------------------------------------------------
  */
 export const COURSES: Course[] = [
   {
-    id: 'course-ejemplo-1',
-    name: '[Asignatura / Curso Docente Impartido - Título por actualizar]',
+    id: 'course-qa3',
+    name: 'Química Analítica III',
     level: 'Licenciatura',
-    frequency: 'Semestral',
-    description: 'Espacio reservado para la descripción de los contenidos teóricos y prácticos de la asignatura impartida en la Facultad de Química de la UNAM.'
+    frequency: '37 grupos impartidos',
+    description: 'Asignatura troncal insignia en la Facultad de Química de la UNAM. Enfocada en equilibrios en medios complejos, electroquímica analítica y metodologías avanzadas de análisis.'
   },
   {
-    id: 'course-ejemplo-2',
-    name: '[Asignatura / Curso de Posgrado Impartido - Título por actualizar]',
+    id: 'course-qa2',
+    name: 'Química Analítica II',
+    level: 'Licenciatura',
+    frequency: '29 grupos impartidos',
+    description: 'Materia fundamental sobre equilibrios químicos simultáneos, reacciones ácido-base, formación de complejos y volumetría en disolución acuosa y no acuosa.'
+  },
+  {
+    id: 'course-qai1',
+    name: 'Química Analítica Instrumental I',
+    level: 'Licenciatura',
+    frequency: '26 grupos impartidos',
+    description: 'Curso teórico-práctico de instrumentación analítica que comprende técnicas ópticas y métodos electroanalíticos.'
+  },
+  {
+    id: 'course-qa1',
+    name: 'Química Analítica I',
+    level: 'Licenciatura',
+    frequency: '22 grupos impartidos',
+    description: 'Introducción conceptual a los principios de la química analítica, tratamiento estadístico de datos, metrología y balances de materia.'
+  },
+  {
+    id: 'course-especialidad',
+    name: 'Química Analítica y Métodos Básicos en Bioquímica Clínica',
     level: 'Posgrado',
-    frequency: 'Semestral / Anual',
-    description: 'Espacio reservado para la descripción del curso o seminario de posgrado impartido a nivel maestría y doctorado.'
+    frequency: '8 grupos impartidos (Especialidad)',
+    description: 'Asignatura de nivel posgrado correspondiente a la Especialidad en Química Analítica y Bioquímica Clínica en la UNAM.'
+  },
+  {
+    id: 'course-maestria',
+    name: 'Temas Selectos de Química Analítica',
+    level: 'Posgrado',
+    frequency: '5 grupos impartidos (Maestría en Ciencias)',
+    description: 'Cursos de posgrado en el Programa de Maestría en Ciencias Químicas de la UNAM, especializados en electroquímica analítica, especiación e instrumentación a microescala.'
   }
 ];
 

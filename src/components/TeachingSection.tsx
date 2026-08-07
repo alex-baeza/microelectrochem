@@ -5,9 +5,20 @@ import { Course } from '../types';
 import { BookOpen, GraduationCap, Library, Youtube, Play, ExternalLink, X, Users, Globe } from 'lucide-react';
 
 const THESIS_STATS = [
-  { level: 'Doctorado', count: '[Número de tesis]', color: 'bg-indigo-500', barWidth: 'w-1/2', description: 'Dirección de tesis de doctorado en áreas de química analítica y electroquímica (Sección editable).' },
-  { level: 'Maestría en Ciencias', count: '[Número de tesis]', color: 'bg-sky-500', barWidth: 'w-3/4', description: 'Tesis de maestría enfocadas en métodos electroanalíticos e instrumentación a microescala (Sección editable).' },
-  { level: 'Licenciatura (QFB / Química)', count: '[Número de tesis]', color: 'bg-amber-500', barWidth: 'w-5/6', description: 'Supervisión de tesis profesionales e incorporación de estudiantes a proyectos de investigación (Sección editable).' }
+  { 
+    level: 'Licenciatura (QFB, Química, Q)', 
+    count: '53 tesis', 
+    color: 'bg-amber-500', 
+    barWidth: 'w-[88%]', 
+    description: 'Supervisión de tesis profesionales e incorporación de estudiantes a proyectos de investigación tecnológica y analítica en la Facultad de Química de la UNAM.' 
+  },
+  { 
+    level: 'Maestría en Ciencias', 
+    count: '7 tesis', 
+    color: 'bg-sky-500', 
+    barWidth: 'w-[12%]', 
+    description: 'Dirección de tesis de maestría enfocadas en desarrollo de metodologías electroanalíticas, especiación e instrumentación a microescala total.' 
+  }
 ];
 
 export default function TeachingSection() {
@@ -49,46 +60,110 @@ export default function TeachingSection() {
         </div>
       </div>
 
-      {/* 1. Courses List (Columna única) */}
-      <div className="space-y-5">
+      {/* 1. Courses List & Consolidated Teaching Summary */}
+      <div className="space-y-6">
         <h4 className="font-display font-black text-xl sm:text-2xl text-slate-950 dark:text-slate-50 border-b pb-2 border-slate-200 dark:border-slate-800 flex items-center">
           <BookOpen className="h-6 w-6 mr-2 text-amber-500 shrink-0" />
           Cursos Docentes Impartidos
         </h4>
 
-        <div className="grid grid-cols-1 gap-4">
-          {COURSES.map((course: Course, index) => (
-            <motion.div
-              key={course.id}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="p-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800/80 rounded-2xl relative overflow-hidden shadow-2xs"
-            >
-              <div className="absolute top-5 right-5">
-                <span className={`px-3 py-0.5 text-[9px] font-mono uppercase font-bold rounded-full ${
-                  course.level === 'Posgrado'
-                    ? 'bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-400 border border-indigo-500/10'
-                    : 'bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400 border border-amber-500/10'
-                }`}>
-                  {course.level}
-                </span>
-              </div>
+        {/* Consolidated SIIA & Historical Statistics Summary Banner */}
+        <div className="p-6 bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 rounded-3xl space-y-5 shadow-2xs">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b pb-4 dark:border-slate-800">
+            <div>
+              <span className="text-xs font-mono font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider block">
+                Resumen de Trayectoria Académica
+              </span>
+              <h5 className="font-display font-bold text-lg text-slate-900 dark:text-slate-100">
+                46 Años de Docencia Ininterrumpida en la UNAM
+              </h5>
+            </div>
+            <span className="px-3 py-1 bg-amber-500/10 text-amber-800 dark:text-amber-400 font-mono text-xs font-bold rounded-xl border border-amber-500/20 shrink-0">
+              1979 – Presente
+            </span>
+          </div>
 
-              <div className="space-y-2">
-                <span className="block text-[10px] font-mono font-medium text-slate-400 dark:text-slate-500">
-                  Frecuencia: {course.frequency}
-                </span>
-                <h5 className="font-display font-bold text-base text-slate-900 dark:text-slate-100 pr-20">
-                  {course.name}
-                </h5>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-350 font-sans leading-relaxed">
-                  {course.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="p-4 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl shadow-2xs space-y-1">
+              <span className="text-2xl font-display font-black text-amber-600 dark:text-amber-400 block">140</span>
+              <span className="text-xs font-sans font-bold text-slate-800 dark:text-slate-200 block">Grupos Registrados en SIIA</span>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 font-sans">Registro oficial en el sistema de la UNAM.</p>
+            </div>
+
+            <div className="p-4 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl shadow-2xs space-y-1">
+              <span className="text-2xl font-display font-black text-sky-600 dark:text-sky-400 block">127</span>
+              <span className="text-xs font-sans font-bold text-slate-800 dark:text-slate-200 block">Grupos Licenciatura</span>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 font-sans">90.7% de la carga docente oficial.</p>
+            </div>
+
+            <div className="p-4 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl shadow-2xs space-y-1">
+              <span className="text-2xl font-display font-black text-indigo-600 dark:text-indigo-400 block">13</span>
+              <span className="text-xs font-sans font-bold text-slate-800 dark:text-slate-200 block">Grupos Posgrado</span>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 font-sans">5 Maestría y 8 Especialidad en Q. Analítica.</p>
+            </div>
+          </div>
+
+          <p className="text-xs text-slate-600 dark:text-slate-350 font-sans leading-relaxed">
+            Las asignaturas troncales más impartidas incluyen <strong className="text-slate-900 dark:text-white">Química Analítica III</strong> (37 grupos), <strong className="text-slate-900 dark:text-white">Química Analítica II</strong> (29 grupos), <strong className="text-slate-900 dark:text-white">Química Analítica Instrumental I</strong> (26 grupos) y <strong className="text-slate-900 dark:text-white">Química Analítica I</strong> (22 grupos).
+          </p>
+        </div>
+
+        {/* Top Courses List */}
+        <div className="space-y-3 pt-2">
+          <h5 className="font-display font-bold text-base text-slate-900 dark:text-slate-100 flex items-center">
+            <Library className="h-4 w-4 mr-2 text-amber-500" />
+            Asignaturas Troncales e Instrumentales de Mayor Frecuencia
+          </h5>
+
+          <div className="grid grid-cols-1 gap-4">
+            {COURSES.map((course: Course, index) => (
+              <motion.div
+                key={course.id}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                className="p-5 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl relative overflow-hidden shadow-2xs"
+              >
+                <div className="absolute top-5 right-5">
+                  <span className={`px-3 py-0.5 text-[9px] font-mono uppercase font-bold rounded-full ${
+                    course.level === 'Posgrado'
+                      ? 'bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-400 border border-indigo-500/10'
+                      : 'bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400 border border-amber-500/10'
+                  }`}>
+                    {course.level}
+                  </span>
+                </div>
+
+                <div className="space-y-2">
+                  <span className="block text-[10px] font-mono font-bold text-amber-600 dark:text-amber-400">
+                    {course.frequency}
+                  </span>
+                  <h5 className="font-display font-bold text-base text-slate-900 dark:text-slate-100 pr-20">
+                    {course.name}
+                  </h5>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-350 font-sans leading-relaxed">
+                    {course.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Historical Block: Period 1979 - 2007 */}
+        <div className="p-5 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl space-y-2.5 shadow-2xs">
+          <div className="flex items-center space-x-2">
+            <span className="px-2.5 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-mono text-[10px] font-bold uppercase rounded-md">
+              Trayectoria Histórica 1979 – 2007
+            </span>
+          </div>
+          <h5 className="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-slate-100">
+            Etapa Fundacional Docente en la Facultad de Química
+          </h5>
+          <p className="text-xs text-slate-600 dark:text-slate-350 font-sans leading-relaxed">
+            Inició su carrera como Ayudante de Profesor 'A' en 1979 y alcanzó la definitividad como Profesor de Carrera Titular C de Tiempo Completo en 2002. Durante este periodo inicial de 28 años impartió de forma ininterrumpida asignaturas fundamentales de Licenciatura como <em>Química Analítica I, II y III</em>, <em>Equilibrios Químicos Simultáneos</em>, <em>Métodos Electrométricos y de Separación</em>, <em>Métodos Ópticos de Análisis</em>, <em>Desarrollo Analítico</em> y <em>Trabajo de Investigación</em>.
+          </p>
         </div>
       </div>
 
@@ -101,7 +176,7 @@ export default function TeachingSection() {
 
         <div className="p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl space-y-6 shadow-xs">
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-sans leading-relaxed">
-            Sección dedicada a la dirección y tutoría de trabajos de titulación e investigación académica. Puede personalizar las cifras y descripciones con los datos exactos del grupo en el archivo de datos (<code className="font-mono text-amber-600 dark:text-amber-400">src/data.ts</code>).
+            Dirección y tutoría de trabajos de titulación e investigación académica en la Facultad de Química de la UNAM, con un registro verificado de <strong className="text-slate-900 dark:text-white">60 tesis dirigidas en total</strong> (53 de Licenciatura y 7 de Maestría en Ciencias).
           </p>
 
           <div className="space-y-6">
