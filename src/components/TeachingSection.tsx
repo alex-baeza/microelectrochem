@@ -46,7 +46,7 @@ export default function TeachingSection() {
 
         <div className="pt-2 flex flex-wrap items-center gap-3">
           <a
-            href="https://amyd.quimica.unam.mx"
+            href="https://amyd.quimica.unam.mx/course/search.php?search=Alejandro+Baeza"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl text-xs transition-colors shadow-2xs"
