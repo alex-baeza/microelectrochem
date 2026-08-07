@@ -7,44 +7,169 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", "Inter", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-
-  /* Accent colors matching a high-end academic/scientific theme: navy/gold for Light, deep teal/cyan for Dark */
-  --color-primary-light: #0b2545;  /* UNAM Academic Blue */
-  --color-primary-dark: #38bdf8;   /* Sky Blue / Cyan accent */
-  --color-accent-light: #b392ac;   /* Muted gold/rose */
-  --color-accent-dark: #fbbf24;    /* Amber/Gold */
 }
 
-/* Custom scroll padding and mobile viewport background defaults */
+/* ============================================================================
+   PALETA EDITORIAL ACADÉMICA "CÁLIDA Y MINERAL" (Diseño Anti-Slop de IA)
+   
+   Fundamentación basada en Teoría del Color & Ergonomía Visual:
+   1. Modo Claro (60% Dominante): Fondo #f3f2ee (Pergamino / Lino Suave)
+      - Elimina el encandilamiento del blanco deslumbrante (#ffffff).
+      - Mantiene la máxima legibilidad sin causar fatiga ocular durante la lectura.
+   2. Estructura & Tarjetas (30% Secundario): #fcfbf8 y #e8e6df (Piedra y Alabastro)
+      - Crea capas de elevación con bordes suaves #dcd8ce sin recurrir a sombras oscuras.
+   3. Acentos de Identidad (10% Focal): #b47216 (Dorado/Cobre Universitario UNAM) y #1e5e57
+      - Aportan rigor científico, sofisticación y jerarquía visual clara.
+      
+   4. Modo Oscuro (60% Dominante): #0d1311 (Obsidiana / Basalto Profundo).
+   5. Superficies Modo Oscuro (30% Secundario): #16201d con bordes #263530.
+   6. Acentos Modo Oscuro (10% Focal): #f0ad42 (Oro universitario cálido) y #30a99d (Verde esmeralda/Cian).
+   ============================================================================ */
+
+/* BASE CANVAS & BACKGROUNDS (60%) */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: #f3f2ee;
+  color: #1a231f;
   min-height: 100%;
 }
 
 html.dark {
-  background-color: #020617;
-  color: #f1f5f9;
+  background-color: #0d1311;
+  color: #eaf0ec;
 }
 
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: #f3f2ee;
+  color: #1a231f;
   overflow-x: hidden;
   width: 100%;
 }
 
 html.dark body {
-  background-color: #020617;
-  color: #f1f5f9;
+  background-color: #0d1311;
+  color: #eaf0ec;
 }
 
-/* Custom styles for high-contrast scientific presentation in light and dark mode */
+/* LIGHT MODE OVERRIDES - WARM PARCHMENT & MINERAL ALABASTER */
+html:not(.dark) .bg-slate-50,
+html:not(.dark) .bg-slate-100\/50 {
+  background-color: #f3f2ee !important;
+}
+
+html:not(.dark) .bg-white {
+  background-color: #fcfbf8 !important;
+  color: #1a231f !important;
+}
+
+html:not(.dark) .bg-slate-100 {
+  background-color: #e8e6df !important;
+}
+
+html:not(.dark) .border-slate-200,
+html:not(.dark) .border-slate-100,
+html:not(.dark) .border-slate-200\/80 {
+  border-color: #dcd8ce !important;
+}
+
+html:not(.dark) .border-slate-300 {
+  border-color: #c4beaf !important;
+}
+
+html:not(.dark) .text-slate-900,
+html:not(.dark) .text-slate-950,
+html:not(.dark) .text-slate-800 {
+  color: #141c19 !important;
+}
+
+html:not(.dark) .text-slate-700,
+html:not(.dark) .text-slate-600 {
+  color: #2e3b35 !important;
+}
+
+html:not(.dark) .text-slate-500,
+html:not(.dark) .text-slate-400 {
+  color: #55665f !important;
+}
+
+/* ACCENT REFINEMENTS (LIGHT MODE) */
+html:not(.dark) .text-amber-600,
+html:not(.dark) .text-amber-700,
+html:not(.dark) .text-amber-800 {
+  color: #ab6a11 !important;
+}
+
+html:not(.dark) .bg-amber-500\/10 {
+  background-color: rgba(171, 106, 17, 0.1) !important;
+}
+
+html:not(.dark) .border-amber-500\/20 {
+  border-color: rgba(171, 106, 17, 0.25) !important;
+}
+
+html:not(.dark) .text-sky-600,
+html:not(.dark) .text-sky-700,
+html:not(.dark) .text-sky-800 {
+  color: #185e56 !important;
+}
+
+html:not(.dark) .bg-sky-500\/10 {
+  background-color: rgba(24, 94, 86, 0.1) !important;
+}
+
+html:not(.dark) .border-sky-500\/20 {
+  border-color: rgba(24, 94, 86, 0.25) !important;
+}
+
+/* DARK MODE OVERRIDES - OBSIDIAN BASALT & EMERALD CYAN */
+html.dark .bg-slate-950,
+html.dark .bg-slate-900 {
+  background-color: #0d1311 !important;
+}
+
+html.dark .bg-slate-900\/90,
+html.dark .bg-slate-900\/60,
+html.dark .bg-slate-950\/60,
+html.dark .bg-slate-800,
+html.dark div.bg-white {
+  background-color: #16201d !important;
+  color: #eaf0ec !important;
+}
+
+html.dark .border-slate-800,
+html.dark .border-slate-800\/80,
+html.dark .border-slate-900 {
+  border-color: #263530 !important;
+}
+
+html.dark .text-slate-100,
+html.dark .text-slate-50,
+html.dark .text-slate-200 {
+  color: #f4f8f5 !important;
+}
+
+html.dark .text-slate-300,
+html.dark .text-slate-350,
+html.dark .text-slate-400,
+html.dark .text-slate-500 {
+  color: #a3b5ad !important;
+}
+
+html.dark .text-amber-400,
+html.dark .text-amber-300 {
+  color: #f0ad42 !important;
+}
+
+html.dark .text-sky-400,
+html.dark .text-sky-300 {
+  color: #30a99d !important;
+}
+
+/* Scientific Grid & Utilities */
 .scientific-grid {
   background-size: 32px 32px;
   background-image: radial-gradient(circle, currentColor 1.2px, transparent 1.2px);
@@ -57,9 +182,9 @@ html.dark body {
     linear-gradient(to bottom, currentColor 1px, transparent 1px);
 }
 
-/* Markdown styling if needed */
 .markdown-body {
   font-family: var(--font-sans);
   line-height: 1.6;
 }
+
 

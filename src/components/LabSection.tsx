@@ -194,7 +194,7 @@ export default function LabSection() {
                 </div>
               </div>
 
-              <div className="w-full bg-slate-50 dark:bg-slate-950/60 rounded-xl overflow-hidden p-2 border border-slate-100 dark:border-slate-850">
+              <div className="w-full rounded-2xl overflow-hidden">
                 <iframe
                   title="Presencia en la República Mexicana:"
                   aria-label="Symbol map"
@@ -205,6 +205,7 @@ export default function LabSection() {
                   style={{ width: '0', minWidth: '100%', border: 'none', minHeight: '520px' }}
                   height="520"
                   data-external="1"
+                  className="w-full bg-white"
                 />
               </div>
             </motion.div>
@@ -228,7 +229,7 @@ export default function LabSection() {
                 </div>
               </div>
 
-              <div className="w-full bg-slate-50 dark:bg-slate-950/60 rounded-xl overflow-hidden p-2 border border-slate-100 dark:border-slate-850">
+              <div className="w-full rounded-2xl overflow-hidden">
                 <iframe
                   title="Presencia Internacional:"
                   aria-label="Mapa del símbolo"
@@ -239,6 +240,7 @@ export default function LabSection() {
                   style={{ width: '0', minWidth: '100%', border: 'none', minHeight: '500px' }}
                   height="500"
                   data-external="1"
+                  className="w-full bg-white"
                 />
               </div>
             </motion.div>

@@ -121,7 +121,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
             <motion.div variants={itemVariants} className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <button
                 onClick={onLearnMore}
-                className="inline-flex items-center px-6 py-3.5 bg-primary-light hover:bg-slate-850 dark:bg-sky-500 dark:hover:bg-sky-400 text-white dark:text-slate-950 font-sans font-bold text-xs md:text-sm rounded-xl tracking-wide shadow-md shadow-sky-500/10 cursor-pointer transition-all active:scale-95"
+                className="inline-flex items-center px-6 py-3.5 bg-slate-900 hover:bg-slate-800 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-slate-950 font-sans font-bold text-xs md:text-sm rounded-xl tracking-wide shadow-md shadow-slate-900/10 dark:shadow-amber-500/10 cursor-pointer transition-all active:scale-95 group"
               >
                 <span>Conocer Trayectoria</span>
                 <ArrowRight className="h-4.5 w-4.5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
@@ -129,7 +129,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
 
               <a
                 href="#contacto"
-                className="inline-flex items-center px-6 py-3.5 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-850 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 font-sans font-bold text-xs md:text-sm rounded-xl tracking-wide transition-all active:scale-95 shadow-2xs"
+                className="inline-flex items-center px-6 py-3.5 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-800 font-sans font-bold text-xs md:text-sm rounded-xl tracking-wide transition-all active:scale-95 shadow-2xs"
               >
                 <span>Proponer Colaboración</span>
               </a>

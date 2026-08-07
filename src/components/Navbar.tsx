@@ -107,7 +107,7 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
                   onClick={() => handleItemClick(item.id)}
                   className={`relative px-3 py-2 rounded-lg text-sm font-sans font-medium transition-colors ${
                     isActive 
-                      ? 'text-primary-light dark:text-primary-dark font-semibold' 
+                      ? 'text-amber-800 dark:text-amber-400 font-bold' 
                       : 'text-slate-600 dark:text-slate-350 hover:text-slate-900 dark:hover:text-slate-100'
                   }`}
                 >
